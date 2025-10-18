@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>201Models — Hard‑surface 3D for Games & VR</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>201Models — Hard-surface 3D for Games & VR</title>
+  <meta name="description" content="Hard-surface, game-ready 3D models for Games & VR. Clean topology, baked and optimized for real-time engines." />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar glass">
-    <div class="wrap">
+  <header class="site-header">
+    <div class="wrap nav">
       <div class="brand"><span class="dot"></span>201Models</div>
-      <nav>
+      <nav class="menu">
         <a href="#work">Work</a>
         <a href="#games">Games</a>
         <a href="#strengths">Strengths</a>
@@ -21,101 +21,121 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero layout">
-      <div class="hero-left card glow-box neon-pulse">
-        <p class="eyebrow">BLENDER • SUBSTANCE • GAME‑READY</p>
-        <h1 class="title">
-          Hard‑surface 3D for
-          <span class="neon">Games & VR</span>
-        </h1>
-        <p class="sub">
+  <main>
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="breadcrumb">BLENDER • SUBSTANCE • GAME‑READY</p>
+        <h1>Hard‑surface 3D for<br><span class="neon">Games &amp; VR</span></h1>
+        <p class="lede">
           Clean topology, efficient UVs, and polished PBR for real‑time engines. Based in Germany.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="#work">View projects →</a>
-          <a class="btn ghost" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join the Discord</a>
+          <a class="btn btn-ghost" href="#work">View projects →</a>
+          <a class="btn btn-primary" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join the Discord</a>
         </div>
       </div>
 
-      <div class="hero-right card lift-in">
-        <img class="hero-jet" src="images/Jet.png" alt="SR‑71 inspired jet"/>
+      <div class="hero-art">
+        <img src="images/Jet.png" alt="SR‑71 inspired jet render" />
       </div>
     </section>
 
-    <!-- SMALL BAR WITH COMMISSIONS -->
-    <section class="note glass lift-in" id="strengths">
-      <div class="note-inner">
-        <strong>Open for commissions</strong> — low‑poly, baked, and game‑ready.
-        <span class="pill ok">Available</span>
+    <!-- Work -->
+    <section id="work" class="wrap work">
+      <div class="work-head">
+        <h2>Selected Work</h2>
+        <p class="note">Open for commissions — low‑poly, baked, and game‑ready</p>
       </div>
-    </section>
 
-    <!-- GAMES -->
-    <section class="games card glow-box neon-sweep" id="games">
-      <h2 class="section-title">Games</h2>
-      <a class="gorilla" href="https://www.meta.com/en-gb/experiences/gorilla-royale/7144240162286747/" target="_blank" rel="noopener">
-        Gorilla Royale
-      </a>
-      <p class="muted small">Plus several smaller VR/game projects.</p>
-    </section>
-
-    <!-- WORK GRID -->
-    <section class="work" id="work">
-      <h2 class="section-title with-pad card glass">Selected Work</h2>
       <div class="grid">
-        <a class="tile zoom glow-on-hover reveal" href="images/Missile.png" target="_blank" rel="noopener">
-          <div class="tile-img"><img src="images/Missile.png" alt="Missile prop"/></div>
-          <div class="tile-footer">
-            <div class="tile-title">Missile Prop</div>
-            <div class="tile-tags">Blender • Texturing</div>
-          </div>
-        </a>
+        <!-- Missile -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Missile.png" alt="Missile prop" />
+            </div>
+            <div class="card-meta">
+              <h4>Missile Prop</h4>
+              <p>Blender · Texturing</p>
+            </div>
+          </a>
+        </article>
 
-        <a class="tile zoom glow-on-hover reveal" href="images/Bomb.png" target="_blank" rel="noopener">
-          <div class="tile-img"><img src="images/Bomb.png" alt="Nuclear bomb"/></div>
-          <div class="tile-footer">
-            <div class="tile-title">Nuclear Bomb</div>
-            <div class="tile-tags">Blender • Substance</div>
-          </div>
-        </a>
+        <!-- Nuclear Bomb -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Bomb.png" alt="Nuclear bomb prop" />
+            </div>
+            <div class="card-meta">
+              <h4>Nuclear Bomb</h4>
+              <p>Blender · Substance</p>
+            </div>
+          </a>
+        </article>
 
-        <a class="tile zoom glow-on-hover reveal" href="images/Vest.png" target="_blank" rel="noopener">
-          <div class="tile-img"><img src="images/Vest.png" alt="Camo vest"/></div>
-          <div class="tile-footer">
-            <div class="tile-title">Camo Vest</div>
-            <div class="tile-tags">Game asset • Low‑poly</div>
-          </div>
-        </a>
+        <!-- Camo Vest -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Vest.png" alt="Camo vest low‑poly game asset" />
+            </div>
+            <div class="card-meta">
+              <h4>Camo Vest</h4>
+              <p>Game asset · Low‑poly</p>
+            </div>
+          </a>
+        </article>
       </div>
-
-      <p class="tip muted">Tip: hover or tap a tile to zoom in. Click to open a full view.</p>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact card glow-box neon-sweep" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <p>I’m open for both small and big commissions. The fastest way to reach me is through my Discord server — join and send me a DM.</p>
-      <a class="btn primary big" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join the Discord</a>
+    <!-- Games -->
+    <section id="games" class="wrap games">
+      <h2>Games I’ve worked on</h2>
+      <ul class="games-list">
+        <li>
+          <a href="https://www.meta.com/en-gb/experiences/gorilla-royale/7144240162286747/" target="_blank" rel="noopener">
+            Gorilla Royale (Meta Quest)
+          </a>
+        </li>
+        <li>Various smaller VR prototypes and indie projects</li>
+      </ul>
+    </section>
+
+    <!-- Strengths -->
+    <section id="strengths" class="wrap strengths">
+      <h2>Strengths</h2>
+      <ul class="strengths-grid">
+        <li><strong>Hard‑surface specialist</strong> — crisp forms, realistic materials</li>
+        <li><strong>Game‑ready</strong> — clean topology, efficient UVs, baked and optimized</li>
+        <li><strong>Real‑time focus</strong> — tuned for modern engines (UE / Unity)</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap contact">
+      <h2>Contact</h2>
+      <p>
+        I’m open for both small and large commissions. The fastest way to reach me:
+        <a class="link" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">join my Discord</a> and send me a DM.
+      </p>
+      <a class="btn btn-primary" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join Discord</a>
     </section>
   </main>
 
-  <footer class="foot wrap">
-    <div class="foot-inner glass">
-      <span>© <span id="year"></span> <strong>201Models</strong></span>
-      <a href="#top" class="to-top">Back to top ↑</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> 201Models</small>
     </div>
   </footer>
 
-  <!-- Fake Cookie Banner (explains there is no tracking) -->
-  <div class="cookie glass" id="cookie">
-    <div class="cookie-inner">
-      <div class="cookie-title">Cookie Notice</div>
-      <p>This website does <strong>not</strong> use analytics, ads, or tracking cookies. We only store a single local setting to hide this banner. Press “Accept” to continue vibing in neon ✨</p>
-      <div class="cookie-actions">
-        <button id="cookie-accept" class="btn primary">Accept</button>
-      </div>
+  <!-- Cookie wall -->
+  <div id="cookie-wall" class="cookie-wall hidden" aria-modal="true" role="dialog">
+    <div class="cookie-card">
+      <h3>Cookies</h3>
+      <p>We use strictly necessary cookies to make this portfolio work. No tracking.</p>
+      <button id="accept-cookies" class="btn-accept">Accept</button>
     </div>
   </div>
 

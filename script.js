@@ -1,19 +1,10 @@
-// footer year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// cookie banner (no tracking; only stores a flag in localStorage)
-const cookie = document.getElementById('cookie');
-const accept = document.getElementById('cookie-accept');
-if(!localStorage.getItem('cookieAccepted')) cookie.style.display = 'block';
-accept?.addEventListener('click', () => {
-  localStorage.setItem('cookieAccepted', '1');
-  cookie.style.display = 'none';
-});
-
-// reveal on scroll
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-  })
-},{threshold:.22});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('y').textContent = new Date().getFullYear();
+(function () {
+  const KEY = '201models.cookies.accepted';
+  const wall = document.getElementById('cookie-wall');
+  const btn  = document.getElementById('accept-cookies');
+  function showWall(){ wall.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+  function hideWall(){ wall.classList.add('hidden'); document.body.style.overflow = ''; }
+  if (localStorage.getItem(KEY) !== 'true') { showWall(); }
+  btn?.addEventListener('click', ()=>{ localStorage.setItem(KEY,'true'); hideWall(); });
+})();
