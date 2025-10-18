@@ -1,5 +1,1 @@
-Place your renders here with these filenames so the tiles show correctly:
-- Jet.png
-- Missile.png
-- Bomb.png
-- Vest.png
+Place your Jet.png, Bomb.png, Vest.png, Missile.png files here.
