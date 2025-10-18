@@ -1,0 +1,50 @@
+:root{
+  --bg: #0a0a0a;
+  --panel: #111;
+  --muted: #bdbdbd;
+  --text: #e9e9e9;
+  --line: #212121;
+  --accent: #9eff50;
+  --accent-2: #8df24a;
+}
+*{ box-sizing:border-box } html,body{ height:100% }
+body{ margin:0; font:16px/1.45 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text);
+  background: radial-gradient(1200px 600px at 120% -10%, rgba(160,255,110,.06), transparent 60%), var(--bg); }
+.wrap{ width:min(1100px, 92vw); margin-inline:auto }
+/* header */
+.site-header{ position:sticky; top:0; z-index:50; background: rgba(10,10,10,.75); backdrop-filter: blur(6px); border-bottom:1px solid var(--line) }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding:10px 0 }
+.brand{ font-weight:800 } .brand .dot{ display:inline-block; width:.6rem; height:.6rem; background:var(--accent); border-radius:50%; margin-right:.4rem; box-shadow:0 0 16px var(--accent) }
+.menu a{ color:#cfcfcf; text-decoration:none; margin-left:18px } .menu a:hover{ color:#fff }
+/* hero */
+.hero{ display:grid; grid-template-columns: 1.2fr 1fr; gap:36px; align-items:center; padding:48px 0 24px }
+.breadcrumb{ color:#8a8a8a; letter-spacing:.15em; font-size:.77rem }
+h1{ font-size: clamp(2.2rem, 4.0vw, 3.5rem); margin:.25rem 0 1rem }
+.neon{ color:var(--accent); text-shadow: 0 0 14px rgba(158,255,80,.35), 0 0 34px rgba(158,255,80,.25) }
+.lede{ color:#cfcfcf; max-width:50ch }
+.cta-row{ display:flex; gap:12px; margin-top:14px }
+.btn{ display:inline-block; text-decoration:none; font-weight:800; padding:10px 14px; border-radius:10px }
+.btn-ghost{ color:#fff; border:1px solid var(--line); background: #121212 } .btn-ghost:hover{ border-color:#2c2c2c; filter:brightness(.98) }
+.btn-primary{ background:var(--accent); color:#0a0a0a } .btn-primary:hover{ filter:brightness(.95) }
+.hero-art{ display:grid; place-items:center } .hero-art img{ width:100%; height: 520px; object-fit: contain; object-position:center; filter: drop-shadow(0 0 12px rgba(150,255,120,.18)) drop-shadow(0 0 36px rgba(150,255,120,.12)); }
+/* work */
+.work{ padding: 18px 0 64px } .work-head{ display:flex; align-items:end; justify-content:space-between; gap:12px }
+.work-head h2{ margin:0 } .note{ margin:0; color:#a7a7a7; font-size:.9rem }
+.grid{ margin-top:18px; display:grid; grid-template-columns:repeat(3, 1fr); gap:16px }
+.card{ display:block; text-decoration:none; color:inherit; background:#0f0f0f; border:1px solid var(--line); border-radius:14px; overflow:hidden }
+.card-thumb{ position:relative; height:220px; overflow:hidden; background:#0b0b0b }
+.card-thumb img{ width:100%; height:100%; object-fit:contain; object-position:center; transition: transform .35s ease, filter .35s ease }
+.card:hover .card-thumb img{ transform: scale(1.06); filter: drop-shadow(0 0 10px rgba(150,255,100,.35)) drop-shadow(0 0 22px rgba(150,255,100,.2)); }
+.card-meta{ padding:12px 14px; border-top:1px solid var(--line) } .card-meta h4{ margin:.1rem 0 .15rem; font-size:1.02rem } .card-meta p{ margin:0; color:#9ea09c; font-size:.9rem }
+/* games + strengths */
+.games, .strengths{ padding: 10px 0 40px } .games-list{ margin:.5rem 0 0 1rem } .strengths-grid{ margin:.5rem 0 0 1rem }
+/* contact */
+.contact{ padding: 10px 0 80px } .link{ color: var(--accent-2) } .link:hover{ text-decoration: underline }
+/* footer */
+.site-footer{ border-top:1px solid var(--line); color:#aeaeae; padding:16px 0 28px; font-size:.9rem }
+/* cookie wall */
+.cookie-wall{ position:fixed; inset:0; background:rgba(0,0,0,.72); backdrop-filter: blur(2px); display:flex; align-items:center; justify-content:center; z-index:9999 }
+.cookie-wall.hidden{ display:none } .cookie-card{ width:min(92vw, 460px); background:#121212; border:1px solid #242424; border-radius:16px; padding:22px; box-shadow:0 0 0 1px rgba(150,255,120,.08), 0 12px 40px rgba(0,0,0,.45), 0 0 40px rgba(150,255,120,.12) }
+.cookie-card h3{ margin:0 0 6px } .cookie-card p{ margin:0 0 16px; color:#bdbdbd } .btn-accept{ display:inline-block; border:0; background:var(--accent); color:#0a0a0a; font-weight:800; padding:10px 16px; border-radius:10px; cursor:pointer } .btn-accept:hover{ filter:brightness(.95) }
+/* responsive */
+@media (max-width: 900px){ .hero{ grid-template-columns:1fr; } .hero-art img{ height: 360px } .grid{ grid-template-columns:1fr; } }

@@ -3,156 +3,142 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>201Models – Neon Portfolio</title>
-  <meta name="description" content="201Models – Hard-surface 3D portfolio for games & VR" />
-
-  <link rel="preload" href="assets/styles.css" as="style">
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>201Models — Hard-surface 3D for Games & VR</title>
+  <meta name="description" content="Hard-surface, game-ready 3D models for Games & VR. Clean topology, baked and optimized for real-time engines." />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a href="#home" class="brand">
-        <img src="images/logo.png" alt="201Models logo" class="logo" />
-        <span>201Models</span>
-      </a>
-      <ul class="links">
-        <li><a href="#work" class="nav-link">Work</a></li>
-        <li><a href="#games" class="nav-link">Games</a></li>
-        <li><a href="#strengths" class="nav-link">Strengths</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="progress" id="progress"></div>
+    <div class="wrap nav">
+      <div class="brand"><span class="dot"></span>201Models</div>
+      <nav class="menu">
+        <a href="#work">Work</a>
+        <a href="#games">Games</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section id="home" class="hero container reveal">
-      <div class="hero-text">
-        <p class="kicker">Blender • Substance • Game-ready</p>
-        <h1>Hard‑surface 3D for <span class="neon">Games & VR</span> ✨</h1>
-        <p class="sub">Clean topology, efficient UVs, and polished PBR for real‑time engines. Based in Germany 🇩🇪</p>
-        <div class="actions">
-          <a href="#work" class="btn primary">View projects <span class="arrow">→</span></a>
-          <a href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener" class="btn ghost">Join the Discord 💬</a>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="breadcrumb">BLENDER • SUBSTANCE • GAME‑READY</p>
+        <h1>Hard‑surface 3D for<br><span class="neon">Games &amp; VR</span></h1>
+        <p class="lede">
+          Clean topology, efficient UVs, and polished PBR for real‑time engines. Based in Germany.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="#work">View projects →</a>
+          <a class="btn btn-primary" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join the Discord</a>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame floating">
-          <img src="images/Jet.png" alt="SR‑71 inspired jet" />
-        </div>
+
+      <div class="hero-art">
+        <img src="images/Jet.png" alt="SR‑71 inspired jet render" />
       </div>
     </section>
 
     <!-- Work -->
-    <section id="work" class="section container">
-      <div class="section-head reveal">
-        <h2 class="title">Selected Work</h2>
-        <p class="note">Open for commissions – low‑poly, baked, and game‑ready ✅</p>
+    <section id="work" class="wrap work">
+      <div class="work-head">
+        <h2>Selected Work</h2>
+        <p class="note">Open for commissions — low‑poly, baked, and game‑ready</p>
       </div>
+
       <div class="grid">
-        <a class="card reveal" href="#" aria-label="Missile Prop">
-          <div class="thumb"><img src="images/Missile.png" alt="Missile prop" /></div>
-          <div class="meta">
-            <h3>Missile Prop</h3>
-            <p>Blender • Texturing</p>
-          </div>
-        </a>
-        <a class="card reveal" href="#" aria-label="Nuclear Bomb">
-          <div class="thumb"><img src="images/Bomb.png" alt="Nuclear bomb" /></div>
-          <div class="meta">
-            <h3>Nuclear Bomb</h3>
-            <p>Blender • Substance</p>
-          </div>
-        </a>
-        <a class="card reveal" href="#" aria-label="Camo Vest">
-          <div class="thumb"><img src="images/Vest.png" alt="Camo vest" /></div>
-          <div class="meta">
-            <h3>Camo Vest</h3>
-            <p>Game asset • Low‑poly</p>
-          </div>
-        </a>
-        <a class="card reveal" href="#" aria-label="SR‑71 Inspired Jet">
-          <div class="thumb"><img src="images/Jet.png" alt="SR‑71 inspired jet" /></div>
-          <div class="meta">
-            <h3>SR‑71 Inspired Jet</h3>
-            <p>Hard‑surface • Baking</p>
-          </div>
-        </a>
-        <a class="card reveal" href="#" aria-label="Virtual Skate Ramp">
-          <div class="thumb"><img src="images/Train.png" alt="Virtual Skate ramp" /></div>
-          <div class="meta">
-            <h3>Virtual Skate Ramp</h3>
-            <p>Game‑ready • Modular</p>
-          </div>
-        </a>
+        <!-- Missile -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Missile.png" alt="Missile prop" />
+            </div>
+            <div class="card-meta">
+              <h4>Missile Prop</h4>
+              <p>Blender · Texturing</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Nuclear Bomb -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Bomb.png" alt="Nuclear bomb prop" />
+            </div>
+            <div class="card-meta">
+              <h4>Nuclear Bomb</h4>
+              <p>Blender · Substance</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Camo Vest -->
+        <article class="work-card">
+          <a class="card" href="#">
+            <div class="card-thumb">
+              <img src="images/Vest.png" alt="Camo vest low‑poly game asset" />
+            </div>
+            <div class="card-meta">
+              <h4>Camo Vest</h4>
+              <p>Game asset · Low‑poly</p>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
 
     <!-- Games -->
-    <section id="games" class="section container alt">
-      <div class="section-head reveal">
-        <h2 class="title">Games I’ve Worked On 🎮</h2>
-        <p class="note">Selected shipped work and small collabs.</p>
-      </div>
-      <ul class="list reveal">
+    <section id="games" class="wrap games">
+      <h2>Games I’ve worked on</h2>
+      <ul class="games-list">
         <li>
-          <span class="tag">Modeller</span>
           <a href="https://www.meta.com/en-gb/experiences/gorilla-royale/7144240162286747/" target="_blank" rel="noopener">
-            Gorilla Royale <span class="external">↗</span>
+            Gorilla Royale (Meta Quest)
           </a>
         </li>
-        <li>
-          <span class="tag">Mod Developer</span>
-          <a href="https://www.meta.com/en-gb/experiences/virtual-skate/8978552905509626/" target="_blank" rel="noopener">
-            Virtual Skate <span class="external">↗</span>
-          </a>
-        </li>
-        <li>
-          <span class="tag">Various</span>
-          Small props & environment bits for community projects ✨
-        </li>
+        <li>Various smaller VR prototypes and indie projects</li>
       </ul>
     </section>
 
     <!-- Strengths -->
-    <section id="strengths" class="section container">
-      <div class="section-head reveal">
-        <h2 class="title">Strengths & Focus 💪</h2>
-      </div>
-      <div class="pill-grid reveal">
-        <span class="pill">Hard‑surface specialisation</span>
-        <span class="pill">Clean, efficient topology</span>
-        <span class="pill">High‑to‑Low baking</span>
-        <span class="pill">Trim sheets + modular kits</span>
-        <span class="pill">Optimisation for VR</span>
-        <span class="pill">Consistent texel density</span>
-      </div>
+    <section id="strengths" class="wrap strengths">
+      <h2>Strengths</h2>
+      <ul class="strengths-grid">
+        <li><strong>Hard‑surface specialist</strong> — crisp forms, realistic materials</li>
+        <li><strong>Game‑ready</strong> — clean topology, efficient UVs, baked and optimized</li>
+        <li><strong>Real‑time focus</strong> — tuned for modern engines (UE / Unity)</li>
+      </ul>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section container alt">
-      <div class="section-head reveal">
-        <h2 class="title">Contact</h2>
-        <p class="note">For work enquiries or to hang out, join the server:</p>
-      </div>
-      <div class="cta reveal">
-        <a class="btn primary big" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">
-          Join my Discord server 💬
-        </a>
-      </div>
+    <section id="contact" class="wrap contact">
+      <h2>Contact</h2>
+      <p>
+        I’m open for both small and large commissions. The fastest way to reach me:
+        <a class="link" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">join my Discord</a> and send me a DM.
+      </p>
+      <a class="btn btn-primary" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join Discord</a>
     </section>
   </main>
 
-  <footer class="footer container">
-    <div class="foot-left">
-      <img src="images/logo.png" alt="" class="logo sm" />
-      <span>© <span id="year"></span> 201Models</span>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> 201Models</small>
     </div>
-    <a href="#home" class="back">Back to top ↑</a>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <!-- Cookie wall -->
+  <div id="cookie-wall" class="cookie-wall hidden" aria-modal="true" role="dialog">
+    <div class="cookie-card">
+      <h3>Cookies</h3>
+      <p>We use strictly necessary cookies to make this portfolio work. No tracking.</p>
+      <button id="accept-cookies" class="btn-accept">Accept</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
