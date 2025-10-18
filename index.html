@@ -1,176 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>201Models – Neon Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0b0b0b;
-    --card:#131313;
-    --muted:#b3b3b3;
-    --text:#e7e7e7;
-    --neon:#84ff00;
-    --neon-soft:#a9ff4a;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    background: radial-gradient(60% 40% at 50% 0%, rgba(132,255,0,.06), transparent 60%),
-                radial-gradient(30% 30% at 100% 0%, rgba(132,255,0,.05), transparent 70%),
-                var(--bg);
-    color:var(--text);
-  }
-  .wrap{max-width:1200px;margin:0 auto;padding:42px 20px 80px}
-  header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand{
-    display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);
-    filter:drop-shadow(0 0 10px rgba(132,255,0,.35));
-  }
-  .brand img{width:36px;height:36px;border-radius:8px}
-  .brand h1{
-    margin:0;font-size:26px;font-weight:800;letter-spacing:.4px;
-    color:var(--neon);text-shadow:0 0 12px rgba(132,255,0,.6), 0 0 32px rgba(132,255,0,.3);
-  }
-  nav a{
-    color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px;
-  }
-  nav a:hover{color:#fff}
-
-  .hero{margin:38px 0 12px}
-  .hero p{margin:6px 0 0;color:var(--muted)}
-  .hero .subtitle{color:#d9ffd0}
-
-  .grid{
-    display:grid;gap:18px;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-  }
-  @media (max-width:1100px){ .grid{grid-template-columns:repeat(3,1fr)} }
-  @media (max-width:800px){ .grid{grid-template-columns:repeat(2,1fr)} }
-  @media (max-width:520px){ .grid{grid-template-columns:1fr} }
-
-  .card{
-    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:18px;overflow:hidden;position:relative;
-    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-  .thumb{
-    aspect-ratio: 16 / 11;
-    background: #0d0f0d;
-    display:grid;place-items:center;overflow:hidden;
-  }
-  .thumb::before{
-    content:"";position:absolute;inset:-2px;border-radius:20px;
-    box-shadow:0 0 0 rgba(132,255,0,0);
-    transition:box-shadow .25s ease;
-    pointer-events:none;
-  }
-  .thumb img{
-    width:100%;height:100%;object-fit:contain;object-position:center;
-    transform:scale(1);transition:transform .25s ease;
-  }
-  .label{padding:12px 14px 14px;font-size:14px;font-weight:600;color:#eaeaea}
-
-  .card:hover{border-color:rgba(132,255,0,.35);transform:translateY(-2px)}
-  .card:hover .thumb::before{
-    box-shadow:0 0 18px rgba(132,255,0,.35),0 0 50px rgba(132,255,0,.22) inset;
-  }
-  .card:hover img{transform:scale(1.06)}
-  .hint{margin:10px 2px 26px;color:var(--muted);font-size:13px}
-
-  h2.section{margin:36px 0 14px;font-size:24px}
-  h2.section .spark{color:var(--neon)}
-  a.link{color:var(--neon-soft);text-decoration:none}
-  a.link:hover{text-decoration:underline}
-
-  .contact{
-    margin-top:50px;
-    background:linear-gradient(180deg,rgba(132,255,0,.06),rgba(132,255,0,.03));
-    border:1px solid rgba(132,255,0,.25);
-    border-radius:20px;padding:22px 18px;
-  }
-  .cta{
-    display:inline-flex;align-items:center;gap:10px;
-    border:1px solid rgba(132,255,0,.5);
-    background:rgba(132,255,0,.08);
-    color:#dfffbd;text-decoration:none;
-    padding:10px 14px;border-radius:14px;font-weight:700;
-    box-shadow:0 0 18px rgba(132,255,0,.2);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .cta:hover{transform:translateY(-1px);box-shadow:0 0 26px rgba(132,255,0,.35)}
-  footer{margin-top:38px;color:var(--muted);font-size:13px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>201Models – Neon Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#top">
-        <img src="images/logo.png" alt="201Models logo">
-        <h1>201Models</h1>
-      </a>
-      <nav>
-        <a href="#work">Work</a>
-        <a href="#strengths">Strengths</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <div id="progress"></div>
 
-    <section class="hero" id="top">
-      <h2 class="section">Selected Work <span class="spark">✨</span></h2>
-      <p class="subtitle">Hover or tap to zoom. Click image to open full file.</p>
-    </section>
-
-    <section id="work" class="grid">
-      <a class="card" href="images/Missile.png" target="_blank" rel="noopener">
-        <div class="thumb"><img src="images/Missile.png" alt="Missile Prop"></div>
-        <div class="label">Missile Prop</div>
-      </a>
-      <a class="card" href="images/Bomb.png" target="_blank" rel="noopener">
-        <div class="thumb"><img src="images/Bomb.png" alt="Nuclear Bomb"></div>
-        <div class="label">Nuclear Bomb</div>
-      </a>
-      <a class="card" href="images/Vest.png" target="_blank" rel="noopener">
-        <div class="thumb"><img src="images/Vest.png" alt="Camo Vest"></div>
-        <div class="label">Camo Vest</div>
-      </a>
-      <a class="card" href="images/Jet.png" target="_blank" rel="noopener">
-        <div class="thumb"><img src="images/Jet.png" alt="SR-71 Inspired Jet"></div>
-        <div class="label">SR-71 Inspired Jet</div>
-      </a>
-    </section>
-
-    <p class="hint">Tip: images are shown fully (no crop). Hover for a contained zoom with neon glow.</p>
-
-    <h2 id="strengths" class="section">What I’m good at <span class="spark">🛠️</span></h2>
-    <ul style="margin-top:8px;line-height:1.9;color:var(--muted)">
-      <li>Hard-surface modeling for games &amp; VR (clean topology, smart UVs, PBR).</li>
-      <li>Game-ready optimization and baking workflows.</li>
-      <li>Small props to bigger hero pieces; fast iteration &amp; consistent texel density.</li>
-    </ul>
-
-    <h2 class="section">Games I’ve worked on <span class="spark">🎮</span></h2>
-    <p style="margin:8px 0 26px;color:var(--muted)">
-      Featured: <a class="link" href="https://www.meta.com/en-gb/experiences/gorilla-royale/7144240162286747/" target="_blank" rel="noopener">Gorilla Royale</a>  
-      &nbsp;•&nbsp; plus a few small collaborative projects.
-    </p>
-
-    <section id="contact" class="contact">
-      <h2 class="section" style="margin:0 0 6px">Contact <span class="spark">💬</span></h2>
-      <p style="margin:6px 0 14px;color:#eaffcc">
-        I’m open for <strong>small and big commissions</strong>. The easiest way: join my Discord server and DM me.
-      </p>
+  <header class="site-header">
+    <a href="#" class="brand">
+      <img src="images/logo.png" alt="201Models logo">
+      <span>201Models</span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#games">Games</a>
+      <a href="#strengths">Strengths</a>
       <a class="cta" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">
-        <span>✨ Join the 201Models Discord</span>
+        💬 Discord
       </a>
-    </section>
+    </nav>
+  </header>
 
-    <footer>© <script>document.write(new Date().getFullYear())</script> 201Models</footer>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <h1>Hard‑surface 3D for games <span class="neon">by 201Models</span></h1>
+      <p class="sub">Clean topology, game‑ready assets, and crisp detail with a neon vibe.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">View projects</a>
+        <a class="btn" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">Join the Discord</a>
+      </div>
+    </div>
+    <div class="aura aura-1"></div>
+    <div class="aura aura-2"></div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <h2 class="section-title">Selected Work <span>✨</span></h2>
+      <div class="grid">
+        <!-- Removed Virtual Skate item as requested -->
+        <a class="work-card" data-title="Missile Prop">
+          <div class="frame">
+            <img src="images/Missile.png" alt="Missile Prop" loading="lazy">
+          </div>
+          <div class="label">Missile Prop</div>
+        </a>
+
+        <a class="work-card" data-title="Nuclear Bomb">
+          <div class="frame">
+            <img src="images/Bomb.png" alt="Nuclear Bomb" loading="lazy">
+          </div>
+          <div class="label">Nuclear Bomb</div>
+        </a>
+
+        <a class="work-card" data-title="Camo Vest">
+          <div class="frame">
+            <img src="images/Vest.png" alt="Camo Vest" loading="lazy">
+          </div>
+          <div class="label">Camo Vest</div>
+        </a>
+
+        <a class="work-card" data-title="SR‑71 Inspired Jet">
+          <div class="frame">
+            <img src="images/Jet.png" alt="SR‑71 Inspired Jet" loading="lazy">
+          </div>
+          <div class="label">SR‑71 Inspired Jet</div>
+        </a>
+      </div>
+      <p class="hint">Tip: hover or tap a tile to zoom in. Click to open a full view.</p>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="container">
+      <h2 class="section-title">Games I’ve worked on</h2>
+      <ul class="links">
+        <li>
+          <a href="https://www.meta.com/en-gb/experiences/gorilla-royale/7144240162286747/" target="_blank" rel="noopener">
+            Gorilla Royale <span class="ext">↗</span>
+          </a>
+          <span class="chip">Modeller</span>
+        </li>
+        <li><span class="muted">+ a few smaller VR/PC projects</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="strengths">
+    <div class="container">
+      <h2 class="section-title">Strengths & Focus</h2>
+      <ul class="pills">
+        <li>Hard‑surface modelling</li>
+        <li>Game‑ready topology</li>
+        <li>High‑to‑low baking</li>
+        <li>UVs & texel density</li>
+        <li>PBR texturing</li>
+        <li>VR optimisation</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="btn primary" href="https://discord.gg/jYnxFE6eTw" target="_blank" rel="noopener">💬 Join the Discord</a>
+      <div class="copy">© <span id="year"></span> 201Models</div>
+    </div>
+  </footer>
+
+  <!-- Modal for full-size preview -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <button class="close" id="close" aria-label="Close">×</button>
+    <figure class="modal-figure">
+      <img id="modal-img" alt="Preview">
+      <figcaption id="modal-cap"></figcaption>
+    </figure>
   </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
